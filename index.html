@@ -11,11 +11,15 @@
         <nav>
             <a href="https://mail.google.com">Gmail</a>
             <a href="https://www.google.com/imghp">Image</a>
+            <div class="tooltip-container">
             <button type="button" class="icon-button" aria-label="Google-apps">
                 <img src="image/apps.svg" alt="">
+               
             </button>
+            <span class="tooltip">Google Apps</span>
+            </div>
             <button type="button" class="profile" aria-label="Google profile">
-                <img src="image/profilepic.jpg" alt="">
+                <a href="https://accounts.google.com/v3/signin/identifier?continue=https://www.google.com?hl%3Den-US&ec=GAlA8wE&hl=en&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1732003964:1790277346249092"><img src="image/profilepic.jpg" alt=""></a>
 
             </button>
         </nav>
@@ -23,25 +27,55 @@
     <main>
         <img class="google-logo" src="image/google.png" alt="google logo">
         <form class="search-bar" action="https://www.google.com/search">
+            <div class="tooltip-container">
             <button type="button" class="icon-button" aria-label="add files">
-                <img src="image/icon.svg" alt="plus icon">
+                <img src="image/plus.svg" alt="plus icon">
+                <span class="tooltip">Enhance your search with tabs, or an AI tool</span>
 
             </button>
+            </div>
             <input type="text" name="q" placeholder="Ask google" aria lavel="search">
+            <div class="tooltip-container">
             <button type="button" class="icon-button" aria lavel="Search by voice">
                 <img src="image/mic-dark.svg" alt="">
+                <span class="tooltip">Search by voice</span>
 
             </button>
+            </div>
+            <div class="tooltip-container">
             <button type="button " class="icon-button lens"aria aria-label="search by image">
                 <img src="image/lens-dark.svg" alt="">
+                <span class="tooltip">Search by image</span>
 
             </button>
+            </div>
+            <div class="search-ai">
             <button type="submit" class="icon-ai-mode" formaction="https://www.google.com/search?udm=50">
                 <img src="image/ai-mode.svg" alt="">
                 <span>AI Mode</span>
+                <span class="tooltips">Ask AI mood in google search</span>
 
             </button>
+            </div>
         </form>
+        <div class="cards">
+            <a class="card" href="https://www.google.com/search?udm=50">
+                <img src="image/ai-mode.svg" alt="">
+                <span>
+                    <strong>Do more with AI mode</strong>
+                    <small>Creat, summarize, plan</small>
+                </span>
+                <span class="creation">Do more with AI mode,Creat, summarize, plan</span>
+            </a>
+            <a class="card" href="https://gemini.google.com">
+                <span class="emoji" aria-hidden="true">🍌</span>
+                <span>
+                    <strong>Create images</strong>
+                    <small>Reimagine, illustrate, edit</small>
+                </span>
+                <span class="creation">Creat images,Reimagine,illustrate,edit</span>
+            </a>
+        </div>
     </main>
 </body>
 </html>
