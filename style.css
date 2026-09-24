@@ -64,6 +64,11 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+
+}
 
 .icon-button {
     width: 40px;
@@ -73,7 +78,40 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    cursor: pointer;
+    font-size: 20px;
+   
 }
+.tooltip, .tooltips {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    background:  #222;
+    color: white;
+
+    padding: 7px 10px;
+    border-radius: 5px;
+
+    font-size: 13px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.2s ease;
+}
+
+
+
+.tooltip-container:hover .tooltip, 
+.search-ai:hover .tooltips {
+    opacity: 1;
+    visibility: visible;
+}
+
 .icon-button:hover {
     background-color: rgba(60, 64, 67, 0.08);
 }
@@ -84,6 +122,7 @@ nav a:hover {
 .profile {
     width: 40px;
     height: 40px;
+   
     border-radius: 50%;
     margin-left: 5px;
     padding: 4px;
@@ -95,6 +134,8 @@ nav a:hover {
 .profile img {
     width: 32px;
     height: 32px;
+
+    margin-top: -24px;
     border-radius: 50%;
 }
 /* --------- main --------- */
@@ -153,6 +194,12 @@ main {
     initial-value: 0deg;
     inherits: false;
 }
+
+.search-ai {
+    position: relative;
+    display: inline-block;
+}
+
 .icon-ai-mode {
     position: relative;
     isolation: isolate;
@@ -169,6 +216,33 @@ main {
    
     
 }
+.tooltips {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: rgb(111, 42, 214);
+    color: rgb(183, 168, 168);
+
+
+    padding: 7px 10px;
+    border-radius: 5px;
+
+    font-size: 13px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.2s ease;
+}
+
+
+
+
+
 .icon-ai-mode img {
     width: 18px;
     height: 18px;
@@ -202,9 +276,108 @@ main {
 
 }
 
+.icon-ai-mode:hover {
+    box-shadow: 0 0 12px rgba(66, 133, 244, 0.35);
+}
+
+
 .icon-ai-mode:hover::after {
     background-color:  #fff;
 }
+.icon-ai-mode:focus-visible {
+    outline: none;
+}
+@keyframes ai-spin {
+    to {
+        --angle: 360deg
+    }
+}
+@keyframes ai-intro {
+    0%    { opacity: 0;}
+    15%   { opacity: 1;}
+    80%   { opacity: 1;}
+    100%  { opacity: 0;}
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 25px;
+    
+}
+.cards {
+    position: relative;
+    display: flex
+    
+
+}
+.card {
+    display: flex;
+    
+    align-items: center;
+    gap: 14px;
+    width: 240px;
+    height: 56px;
+    padding: 0 16px;
+    border-radius: 12px;
+    background-color: #e9eef6;
+    transition: background-color 0.2s;
+
+}
+.creation {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: rgb(244, 240, 240);
+    color: rgb(59, 59, 61);
+
+    padding: 7px 10px;
+    border-radius: 5px;
+
+    font-size: 13px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.2s ease;
+}
+.card:hover .creation {
+    opacity: 1;
+    visibility: visible;
+}
+.card:hover {
+    background-color:  #dde3ea;
+}
+.card img,
+.card .emoji {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+.card .emoji {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+
+    
+}
+.card strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+}
+.card small {
+    display: block;
+    font-size: 12px;
+    color: #444746;
+}
+
 
 
 
