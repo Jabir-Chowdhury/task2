@@ -66,7 +66,8 @@ nav a:hover {
 }
 .tooltip-container {
     position: relative;
-    display: inline-block;
+     display: inline-block;
+   
 
 }
 
@@ -89,8 +90,8 @@ nav a:hover {
     left: 50%;
     transform: translateX(-50%);
 
-    background:  #222;
-    color: white;
+    background:  #f6f2f2;
+    color: rgb(74, 71, 71);
 
     padding: 7px 10px;
     border-radius: 5px;
@@ -122,7 +123,7 @@ nav a:hover {
 .profile {
     width: 40px;
     height: 40px;
-   
+    margin-top: 13px;
     border-radius: 50%;
     margin-left: 5px;
     padding: 4px;
@@ -135,7 +136,7 @@ nav a:hover {
     width: 32px;
     height: 32px;
 
-    margin-top: -24px;
+    margin-top: -23px;
     border-radius: 50%;
 }
 /* --------- main --------- */
@@ -403,7 +404,7 @@ main {
 
 }
 .shortcuts li:hover a {
-    background-color: var(--hover-strong)
+    background-color:  rgba(60, 64, 67, 0.16);
 }
 .more {
     position: absolute;
@@ -424,5 +425,93 @@ main {
 .more:focus-visible {
     opacity: 1;
 }
+.more:hover {
+    background-color: rgba(60, 64, 67, 0.16);
+}
+
+.more img {
+    width: 16px;
+    height: 16px;
+
+}
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color:  #eef0f5;
+
+    
+
+
+}
+.tile img {
+    width: 24px;
+    height: 24px;
+}
+.label {
+    width: 100%;
+    margin-top: 12px;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    
+  
+}
+.customize {
+    position: fixed;
+    right: 16px;
+   
+    bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 18px;
+    font-size: 13px;
+    font-weight: 500;
+    color:  #041e49;
+    background-color: #d3e3fd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+
+   
+
+
+
+}
+.customize:hover {
+    background-color: #c2d7fb;
+}
+.customize img {
+    width: 16px;
+    height: 16px;
+}
+
+@media (max-width: 600px) {
+    .search-bar .lens, 
+    .ai-mode span {
+        display: none;
+    }
+    .card {
+        width: 100%;
+    }
+
+
+}
+@media (prefers-reduced-motion: reduce) {
+    .ai-mode::before {
+        animation: none;
+    }
+}
+
 
 
