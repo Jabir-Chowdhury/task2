@@ -377,9 +377,52 @@ main {
     font-size: 12px;
     color: #444746;
 }
+.shortcuts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    max-width: 800px;
+    margin-top: 44px;
+    list-style: none;
 
+    
+}
+.shortcuts li {
+    position: relative;
+}
+.shortcuts a {
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    width: 112px;
+    padding: 16px 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
 
+}
+.shortcuts li:hover a {
+    background-color: var(--hover-strong)
+}
+.more {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.15s, background-color 0.15s;
 
-
+    
+}
+.shortcuts li:hover .more,
+.more:focus-visible {
+    opacity: 1;
+}
 
 
